@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Admin`,
+    title: `Signed Contract`,
     description: `The best ecommerce software.`,
     author: `@medusajs`,
   },
