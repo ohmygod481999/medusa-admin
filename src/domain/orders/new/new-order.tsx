@@ -181,7 +181,7 @@ const NewOrder = ({ onDismiss, refresh }) => {
     const doItems = items.map((i) => {
       const obj = {
         variant_id: i.id || "",
-        quantity: i.quantity,
+        quantity: parseInt(i.quantity),
         title: i.title,
       }
 
@@ -234,6 +234,9 @@ const NewOrder = ({ onDismiss, refresh }) => {
     }
 
     draftOrder.shipping_methods = [option]
+    draftOrder.metadata = {
+      provider_id: "manual",
+    }
 
     setCreatingOrder(true)
     try {
